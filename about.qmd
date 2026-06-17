@@ -1,0 +1,16 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/dylan-wheeler-ksu/
+    - icon: github
+      text: Github
+      href: https://github.com/dw-610
+
+---
+
+My name is Dylan Wheeler and I write about AI/ML, wireless communications and information theory.

@@ -1,0 +1,23 @@
+project:
+  type: website
+
+website:
+  description: "A blog about AI, communications and information theory"
+  site-url: https://dw-610.github.io/meaningfulbits
+  title: "Meaningful Bits"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/dw-610
+      - icon: linkedin
+        href: https://www.linkedin.com/in/dylan-wheeler-ksu/
+format:
+  html:
+    theme:
+      - sandstone
+      - brand
+    css: styles.css
+
+
+
