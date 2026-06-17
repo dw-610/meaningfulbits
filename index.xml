@@ -13,7 +13,6 @@
 <lastBuildDate>Wed, 17 Jun 2026 05:00:00 GMT</lastBuildDate>
 <item>
   <title>Post With Code</title>
-  <dc:creator>Harlow Malloc</dc:creator>
   <link>https://dw-610.github.io/meaningfulbits/posts/post-with-code/</link>
   <description><![CDATA[ 
 
@@ -35,7 +34,6 @@
 </item>
 <item>
   <title>Welcome To My Blog</title>
-  <dc:creator>Tristan O&#39;Malley</dc:creator>
   <link>https://dw-610.github.io/meaningfulbits/posts/welcome/</link>
   <description><![CDATA[ 
 
@@ -52,7 +50,7 @@
  ]]></description>
   <category>news</category>
   <guid>https://dw-610.github.io/meaningfulbits/posts/welcome/</guid>
-  <pubDate>Sun, 14 Jun 2026 05:00:00 GMT</pubDate>
+  <pubDate>Wed, 17 Jun 2026 05:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
