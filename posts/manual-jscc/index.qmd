@@ -1,0 +1,62 @@
+---
+title: "<untitlted>"
+date: "2026-06-26"
+categories: [semantic communication, research, code]
+image: "image.jpg"
+---
+
+TODO: 2-3 sentence hook (last)
+
+### Traditional communications and the cliff effect
+
+[TODO - Very short bit on how traditional communications are structured (mention separation theorem). Then describing the cliff effect and why it exists.]
+
+Early wireless communication systems leveraged analog signals to transfer information, meaning that the information was modulated onto a continuous (with respect to both time and signal amplitude) waveform. Analog communication systems still see wide use today, with a prominent example being FM radio.
+
+However, in the 1990s digital wireless communication systems began to take shape. Rather than continuously modulating the carrier waveform with the information to transmit, the continuous signal is first "broken up" in time (sampled) with each sample's amplitude then mapped to discrete levels (quantized). These discrete chunks constitute a digital signal which can then be transmitted using a finite set of pre-selected waveforms. Instead of the reciever needing to estimate a continuum of values from a noisy signal (hard), it now only needs to decide which waveform from the pre-selected set was sent (easier--with proper waveform design).
+
+This benefit, among others, led to digital becoming the standard protocol for nearly all of our modern wireless communications systems, which at a very high level are typically structured in the following way:
+
+[TODO-FIGURE]
+
+- The *source* is the raw digital signal which has undergone sampling and quantization
+- The role of the *source coder* is to compress raw information into a more efficient representation
+- The role of the *channel coder* is to make the compressed signal more robust to the inevitable degradation from the wireless channel
+- The corresponding modules at the receiver perform the inverse operations to hopefully recover the original source signal
+
+One question we might ask is, "Why have seperate functions for source and channel coding and not just combine them into a single module?" This would lead to a conceptually simpler system with potentially improved performance resulting from the joint design and optimization. The answer consists of two parts. First, Claude Shannon showed in one of the most important results of Information Theory, the separation theorem, that a separate source-channel coding scheme is actually optimal under certain theoretical conditions. While these conditions are never the case in practice, a separated scheme still generally works pretty well. Second, source and channel coding perform much different functions, with both having well-developed methods resulting from decades of research. Jointly optimizing the two analytically is generally an intractable problem.
+
+[TODO - need to figure out how to integrate cliff effect into this, doesn't feel natural right after the separation theorem part. maybe reorganize. maybe start with digital vs. analog and cliff effect discussion in its own section and move to general digital system design with source/channel coding]
+
+### Can we combine source and channel coding?
+
+Traditional answer: no, due to reasons including 1) unavailable stochastic models, 2) analytical intractability due to ... (figure this out)
+
+Introduce Deep JSCC as a modern solution -> leverages deep learning overcome the issues above. Mention citation numbers from IEEE to validate popularity of this idea (1250 citations in papers, 22687 full text views)
+
+### Deep JSCC in action
+
+- Brief (brief!) outline of the architecture and training
+- Discuss my reimplementation (only the interesting/different parts, code snippets)
+- End with the main comparison figure and some compare/contrast discussion
+
+### What I learned
+
+#### Information theoretic evaluation
+
+Discussion on the nuances of the compression ratio (source symbols against channel usage instead of channel bits/source bits). Notes about the R_max/R_min pieces that I didn't really understand at first
+
+#### Practical adoption requires more
+
+notes on the analog/digital aspect. Acknowledge that this is a well-known issue with lots of work around it, reference survey that covers this ("Contemporary...")
+
+might be a good spot to include the constellation ("for example, assuming symbols mapping this way, here is the QAM constallation for this image vs 16-QAM")
+
+#### PSNR <-> MSE relationship
+
+Lead with how PSNR is a major metric in image semantic communication (reference "Toward Native AI in 6G..." paper). Note the interesting relationship to MSE (why we can train with tradtional MSE loss), which treats each pixel separately (intuitively not great for image semantics -> show examples where this metric is not entirely aligned -> can build a little support for future article(s) on SemCom metrics)
+
+### Final thoughts
+
+close out with 2-3 sentences
+
