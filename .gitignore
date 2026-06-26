@@ -3,3 +3,6 @@
 .venv
 __pycache__/
 **/*.quarto_ipynb
+ideas.md
+posts/*/notes.md
+.vscode/
